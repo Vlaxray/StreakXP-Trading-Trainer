@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,6 +39,63 @@
         border: 1px solid #2a3d6b;
         border-radius: 16px;
         padding: 22px;
+      }
+
+      .lang-switch {
+        display: inline-flex;
+        gap: 6px;
+        margin-bottom: 12px;
+        background: rgba(10, 16, 33, 0.7);
+        padding: 4px;
+        border-radius: 10px;
+        border: 1px solid #355084;
+      }
+
+      .lang-btn {
+        padding: 7px 10px;
+        border-radius: 7px;
+        border: 1px solid transparent;
+        color: #dce8ff;
+        background: transparent;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .lang-btn.is-active {
+        background: #1d4ed8;
+        border-color: #5b8cff;
+      }
+
+      .lang-block {
+        display: none;
+      }
+
+      .lang-block.is-active {
+        display: block;
+      }
+
+      .cta-wrap {
+        margin-top: 14px;
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid #3b5da0;
+        background: rgba(11, 20, 44, 0.75);
+      }
+
+      .cta {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 10px;
+        background: #1d4ed8;
+        border: 1px solid #5b8cff;
+        color: #eef4ff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .cta:hover {
+        background: #2563eb;
       }
 
       h1, h2 {
@@ -99,6 +156,11 @@
         color: #a9b7e8;
       }
 
+      .meta {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
       a {
         color: var(--accent);
       }
@@ -112,85 +174,265 @@
   </head>
   <body>
     <main class="wrap">
+      <div class="lang-switch" aria-label="Language switch">
+        <button class="lang-btn is-active" type="button" data-lang-target="en">English</button>
+        <button class="lang-btn" type="button" data-lang-target="it">Italiano</button>
+      </div>
+
       <section class="hero">
-        <h1>StreakXP Trading Trainer - Account and Data Deletion</h1>
-        <p>
-          This page explains how users can request account deletion and how they can
-          delete only part of their data.
-        </p>
-        <p>
-          Last updated: 2026-04-13
-        </p>
+        <div class="lang-block is-active" data-lang="en">
+          <h1>StreakXP Trading Trainer - Account and Data Deletion Policy</h1>
+          <p class="meta">
+            Google Play app name: <strong>StreakXP Trading Trainer</strong>
+          </p>
+          <p>
+            This page explains how users of StreakXP Trading Trainer can request account
+            deletion and how they can request or perform partial data deletion.
+          </p>
+          <div class="cta-wrap">
+            <p>
+              Official Delete Account URL (Google Play):
+              <a href="mailto:webmaniabusiness@gmail.com?subject=Account%20Deletion%20Request&amp;body=Hello%20StreakXP%20Support%2C%20I%20request%20account%20deletion.%0A%0AGoogle%20account%20email%3A%20" class="cta">
+                Submit account deletion request
+              </a>
+            </p>
+          </div>
+          <p>
+            Last updated: 2026-04-13 (UTC)
+          </p>
+        </div>
+
+        <div class="lang-block" data-lang="it">
+          <h1>StreakXP Trading Trainer - Policy di Eliminazione Account e Dati</h1>
+          <p class="meta">
+            Nome app su Google Play: <strong>StreakXP Trading Trainer</strong>
+          </p>
+          <p>
+            Questa pagina spiega come gli utenti di StreakXP Trading Trainer possono richiedere
+            l'eliminazione dell'account e come possono richiedere o effettuare la cancellazione
+            parziale dei dati.
+          </p>
+          <div class="cta-wrap">
+            <p>
+              URL ufficiale per eliminazione account (Google Play):
+              <a href="mailto:webmaniabusiness@gmail.com?subject=Richiesta%20Eliminazione%20Account&amp;body=Salve%20Supporto%20StreakXP%2C%20richiedo%20l%27eliminazione%20del%20mio%20account.%0A%0AEmail%20Google%20usata%20nell%27app%3A%20" class="cta">
+                Invia richiesta eliminazione account
+              </a>
+            </p>
+          </div>
+          <p>
+            Ultimo aggiornamento: 2026-04-13 (UTC)
+          </p>
+        </div>
       </section>
 
       <section class="grid">
-        <article class="card">
+        <article class="card lang-block is-active" data-lang="en">
           <span class="badge">Full Account Deletion</span>
-          <h2>Delete account and all related data</h2>
+          <h2>Full Account Deletion Request Procedure</h2>
           <p>
-            Users can request complete account deletion directly from the app support channel.
+            Users may request permanent deletion of their account and associated user data by contacting support.
           </p>
           <ul>
-            <li>Send a request email to: <strong>webmaniabusiness@gmail.com</strong></li>
-            <li>Include the email used for login (Google account)</li>
-            <li>Use subject: <strong>Account Deletion Request</strong></li>
+            <li>
+              Use this direct request link:
+              <a href="mailto:webmaniabusiness@gmail.com?subject=Account%20Deletion%20Request&amp;body=Hello%20StreakXP%20Support%2C%20I%20request%20account%20deletion.%0A%0AGoogle%20account%20email%3A%20">Account deletion request email</a>
+            </li>
+            <li>Alternatively, email: <strong>webmaniabusiness@gmail.com</strong></li>
+            <li>Email subject line: <strong>Account Deletion Request</strong></li>
+            <li>Include the Google account email used to sign in to the app</li>
+            <li>Optional: include your profile nickname to assist verification</li>
           </ul>
           <p class="ok">
-            On successful verification, the account and related cloud data are permanently removed.
+            Verified requests are processed within 30 days.
           </p>
         </article>
 
-        <article class="card">
-          <span class="badge">Partial Data Deletion</span>
-          <h2>Delete only profile/challenge data (without deleting account)</h2>
+        <article class="card lang-block" data-lang="it">
+          <span class="badge">Eliminazione Completa Account</span>
+          <h2>Procedura per Richiedere l'Eliminazione Completa</h2>
           <p>
-            The app supports in-app partial deletion.
+            Gli utenti possono richiedere l'eliminazione permanente dell'account e dei dati associati contattando il supporto.
+          </p>
+          <ul>
+            <li>
+              Usa questo link diretto:
+              <a href="mailto:webmaniabusiness@gmail.com?subject=Richiesta%20Eliminazione%20Account&amp;body=Salve%20Supporto%20StreakXP%2C%20richiedo%20l%27eliminazione%20del%20mio%20account.%0A%0AEmail%20Google%20usata%20nell%27app%3A%20">Email richiesta eliminazione account</a>
+            </li>
+            <li>In alternativa, scrivi a: <strong>webmaniabusiness@gmail.com</strong></li>
+            <li>Oggetto email: <strong>Richiesta Eliminazione Account</strong></li>
+            <li>Includi l'email Google usata per accedere all'app</li>
+            <li>Opzionale: includi il nickname del profilo per facilitare la verifica</li>
+          </ul>
+          <p class="ok">
+            Le richieste verificate sono processate entro 30 giorni.
+          </p>
+        </article>
+
+        <article class="card lang-block is-active" data-lang="en">
+          <span class="badge">Data Scope and Retention</span>
+          <h2>Data Deleted and Data Potentially Retained</h2>
+          <ul>
+            <li>
+              <strong>Deleted upon completed account deletion:</strong> account identity data,
+              cloud profile data, challenge/progression data, and user-linked in-app records.
+            </li>
+            <li>
+              <strong>May be retained for a limited period:</strong> minimal technical and
+              security logs required for fraud prevention, legal compliance, and service integrity.
+            </li>
+            <li>
+              <strong>Additional retention period:</strong> up to 90 days for technical/security logs,
+              unless a longer retention period is required by applicable law.
+            </li>
+          </ul>
+          <p class="warn">
+            After deletion is completed, account recovery may not be possible.
+          </p>
+        </article>
+
+        <article class="card lang-block" data-lang="it">
+          <span class="badge">Ambito Dati e Conservazione</span>
+          <h2>Dati Eliminati e Dati Potenzialmente Conservati</h2>
+          <ul>
+            <li>
+              <strong>Eliminati a seguito di completamento della richiesta:</strong> dati identificativi account,
+              dati profilo cloud, progressione/sfide e record utente collegati all'app.
+            </li>
+            <li>
+              <strong>Potenzialmente conservati per un periodo limitato:</strong> log tecnici e di sicurezza minimi
+              necessari per prevenzione frodi, conformita legale e integrita del servizio.
+            </li>
+            <li>
+              <strong>Periodo aggiuntivo di conservazione:</strong> fino a 90 giorni per log tecnici/sicurezza,
+              salvo obblighi di legge che richiedano periodi superiori.
+            </li>
+          </ul>
+          <p class="warn">
+            Dopo il completamento della cancellazione, il recupero dell'account potrebbe non essere possibile.
+          </p>
+        </article>
+
+        <article class="card lang-block is-active" data-lang="en">
+          <span class="badge">Partial Data Deletion</span>
+          <h2>Partial Deletion Without Account Deletion</h2>
+          <p>
+            The app supports in-app partial deletion of profile/challenge data.
           </p>
           <ul>
             <li>Open Profiles</li>
             <li>Select the profile you want to remove</li>
             <li>Use the Delete Profile action</li>
+            <li>Confirm deletion in the in-app prompts</li>
           </ul>
           <p>
-            This removes profile-related progress data (missions, challenge history, profile state)
-            while keeping the user account active.
+            This removes profile-related progress data while keeping the user account active.
           </p>
           <p class="ok">
-            This is a supported partial deletion flow.
+            Partial deletion without deleting the account is supported.
           </p>
         </article>
 
-        <article class="card">
-          <span class="badge">Retention</span>
-          <h2>Data retention policy</h2>
+        <article class="card lang-block" data-lang="it">
+          <span class="badge">Cancellazione Parziale Dati</span>
+          <h2>Cancellazione Parziale Senza Eliminare l'Account</h2>
+          <p>
+            L'app supporta la cancellazione parziale in-app dei dati profilo/challenge.
+          </p>
           <ul>
-            <li>Full account deletion requests are processed within 30 days.</li>
-            <li>After deletion, recovery is not guaranteed.</li>
-            <li>Minimal technical logs may be retained for legal/security obligations.</li>
+            <li>Apri Profili</li>
+            <li>Seleziona il profilo da rimuovere</li>
+            <li>Usa l'azione Elimina Profilo</li>
+            <li>Conferma la cancellazione nei prompt dell'app</li>
+          </ul>
+          <p>
+            Questa operazione rimuove i dati di progressione del profilo mantenendo l'account attivo.
+          </p>
+          <p class="ok">
+            La cancellazione parziale senza eliminare l'account e supportata.
+          </p>
+        </article>
+
+        <article class="card lang-block is-active" data-lang="en">
+          <span class="badge">Retention</span>
+          <h2>Retention Timeline</h2>
+          <ul>
+            <li>Verified full account deletion requests are processed within 30 days.</li>
+            <li>After deletion completion, restoration is not guaranteed.</li>
+            <li>Minimal technical/security logs may be retained for up to 90 days.</li>
           </ul>
         </article>
 
-        <article class="card">
-          <span class="badge">Important</span>
-          <h2>What this means for Google Play form</h2>
+        <article class="card lang-block" data-lang="it">
+          <span class="badge">Conservazione</span>
+          <h2>Timeline di Conservazione</h2>
           <ul>
-            <li>
-              <strong>Can users request account deletion?</strong> Yes
-            </li>
-            <li>
-              <strong>Do users have partial deletion without deleting account?</strong> Yes
-              (profile deletion in-app)
-            </li>
+            <li>Le richieste verificate di eliminazione completa sono processate entro 30 giorni.</li>
+            <li>Dopo il completamento, il ripristino non e garantito.</li>
+            <li>Log tecnici/sicurezza minimi possono essere conservati fino a 90 giorni.</li>
+          </ul>
+        </article>
+
+        <article class="card lang-block is-active" data-lang="en">
+          <span class="badge">Google Play Form</span>
+          <h2>Google Play Declaration Mapping</h2>
+          <ul>
+            <li><strong>Can users request account deletion?</strong> Yes</li>
+            <li><strong>Do users have partial deletion without deleting account?</strong> Yes (in-app profile deletion)</li>
           </ul>
           <p class="warn">
-            If your support email is different, update it before publishing.
+            If your support contact changes, update this page before publishing updates.
+          </p>
+        </article>
+
+        <article class="card lang-block" data-lang="it">
+          <span class="badge">Modulo Google Play</span>
+          <h2>Mappatura Dichiarazioni Google Play</h2>
+          <ul>
+            <li><strong>Gli utenti possono richiedere l'eliminazione account?</strong> Sì</li>
+            <li><strong>Esiste cancellazione parziale senza eliminare account?</strong> Sì (eliminazione profilo in-app)</li>
+          </ul>
+          <p class="warn">
+            Se il contatto supporto cambia, aggiorna questa pagina prima della pubblicazione.
           </p>
         </article>
       </section>
 
-      <p class="footer">
-        If you need support, contact: <a href="mailto:webmaniabusiness@gmail.com">webmaniabusiness@gmail.com</a>
+      <p class="footer lang-block is-active" data-lang="en">
+        Support contact: <a href="mailto:webmaniabusiness@gmail.com">webmaniabusiness@gmail.com</a>
+      </p>
+
+      <p class="footer lang-block" data-lang="it">
+        Contatto supporto: <a href="mailto:webmaniabusiness@gmail.com">webmaniabusiness@gmail.com</a>
       </p>
     </main>
+
+    <script>
+      (function () {
+        const buttons = document.querySelectorAll('[data-lang-target]');
+        const blocks = document.querySelectorAll('[data-lang]');
+
+        function setLanguage(lang) {
+          document.documentElement.lang = lang;
+
+          buttons.forEach((btn) => {
+            btn.classList.toggle('is-active', btn.getAttribute('data-lang-target') === lang);
+          });
+
+          blocks.forEach((block) => {
+            block.classList.toggle('is-active', block.getAttribute('data-lang') === lang);
+          });
+        }
+
+        buttons.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang-target') || 'en';
+            setLanguage(lang);
+          });
+        });
+
+        setLanguage('en');
+      })();
+    </script>
   </body>
 </html>
