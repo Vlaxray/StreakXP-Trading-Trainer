@@ -1,23 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StreakXP Trading Trainer by OverTrade Lab- Data Deletion Request</title>
-    <meta
-      name="description"
-      content="How to request deletion of your data in StreakXP Trading Trainer."
-    />
+    <title>StreakXP - Account and Data Deletion</title>
     <style>
       :root {
-        --bg: #09090b;
-        --card: #18181b;
-        --text: #e4e4e7;
-        --muted: #a1a1aa;
-        --accent: #22d3ee;
-        --warn: #f87171;
-        --ok: #4ade80;
-        --border: #3f3f46;
+        --bg: #0b1020;
+        --bg-2: #111a33;
+        --card: #15213f;
+        --text: #e7ecff;
+        --muted: #b6c2ee;
+        --accent: #7dd3fc;
+        --accent-2: #86efac;
+        --danger: #fca5a5;
       }
 
       * {
@@ -26,104 +22,88 @@
 
       body {
         margin: 0;
-        font-family: "Segoe UI", Arial, sans-serif;
-        background: radial-gradient(circle at top, #111827 0%, var(--bg) 55%);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: radial-gradient(circle at 20% 0%, var(--bg-2), var(--bg));
         color: var(--text);
-        line-height: 1.6;
+        line-height: 1.55;
       }
 
       .wrap {
-        max-width: 860px;
+        max-width: 960px;
         margin: 0 auto;
-        padding: 24px 16px 48px;
+        padding: 28px 18px 48px;
       }
 
-      .card {
-        background: linear-gradient(180deg, #1f2937 0%, var(--card) 40%);
-        border: 1px solid var(--border);
+      .hero {
+        background: linear-gradient(135deg, #1e2f57, #1a2750);
+        border: 1px solid #2a3d6b;
         border-radius: 16px;
-        padding: 20px;
-        margin-bottom: 16px;
+        padding: 22px;
       }
 
-      h1,
-      h2,
-      h3 {
+      h1, h2 {
         margin: 0 0 10px;
-        line-height: 1.25;
       }
 
-      h1 {
-        font-size: 28px;
-      }
-
-      h2 {
-        margin-top: 8px;
-        font-size: 20px;
-        color: var(--accent);
-      }
-
-      p,
-      li {
-        color: var(--text);
-      }
-
-      .muted {
+      p {
+        margin: 0 0 12px;
         color: var(--muted);
-      }
-
-      .pill {
-        display: inline-block;
-        padding: 4px 10px;
-        border-radius: 999px;
-        border: 1px solid #155e75;
-        background: rgba(34, 211, 238, 0.12);
-        color: #a5f3fc;
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-      }
-
-      .warn {
-        border-color: #7f1d1d;
-        background: rgba(127, 29, 29, 0.22);
-      }
-
-      .warn strong {
-        color: #fecaca;
-      }
-
-      .ok {
-        border-color: #14532d;
-        background: rgba(20, 83, 45, 0.22);
-      }
-
-      ol,
-      ul {
-        margin: 8px 0 0 20px;
-        padding: 0;
-      }
-
-      code {
-        background: #27272a;
-        border: 1px solid #3f3f46;
-        border-radius: 6px;
-        padding: 1px 6px;
-        color: #f4f4f5;
-      }
-
-      a {
-        color: #67e8f9;
       }
 
       .grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 14px;
+        margin-top: 14px;
       }
 
-      @media (min-width: 780px) {
+      .card {
+        background: var(--card);
+        border: 1px solid #2a3d6b;
+        border-radius: 14px;
+        padding: 16px;
+      }
+
+      .badge {
+        display: inline-block;
+        font-size: 12px;
+        padding: 3px 8px;
+        border-radius: 999px;
+        margin-bottom: 8px;
+        border: 1px solid #37548f;
+        color: var(--accent);
+      }
+
+      ul {
+        margin: 8px 0 0 20px;
+        color: var(--muted);
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .ok {
+        color: var(--accent-2);
+        font-weight: 600;
+      }
+
+      .warn {
+        color: var(--danger);
+        font-weight: 600;
+      }
+
+      .footer {
+        margin-top: 18px;
+        font-size: 13px;
+        color: #a9b7e8;
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      @media (min-width: 820px) {
         .grid {
           grid-template-columns: 1fr 1fr;
         }
@@ -132,74 +112,85 @@
   </head>
   <body>
     <main class="wrap">
-      <div class="card">
-        <span class="pill">Google Play - Data deletion</span>
-        <h1>StreakXP Trading Trainer - Data Deletion Request</h1>
-        <p class="muted">
-          This page describes how users can request deletion of their app data for
-          <strong>StreakXP Trading Trainer</strong>.
+      <section class="hero">
+        <h1>StreakXP Trading Trainer - Account and Data Deletion</h1>
+        <p>
+          This page explains how users can request account deletion and how they can
+          delete only part of their data.
         </p>
-      </div>
-
-      <section class="card">
-        <h2>How users can request deletion</h2>
-        <ol>
-          <li>Open the app.</li>
-          <li>Go to <strong>Profile</strong>.</li>
-          <li>Choose one of the following options:</li>
-        </ol>
-        <ul>
-          <li>
-            <strong>Delete a single profile</strong>: use the trash icon next to the
-            selected profile in the profile modal.
-          </li>
-          <li>
-            <strong>Full local reset</strong>: tap <code>Reset totale dati locali</code>
-            to remove all local app data.
-          </li>
-        </ul>
+        <p>
+          Last updated: 2026-04-13
+        </p>
       </section>
 
       <section class="grid">
-        <div class="card ok">
-          <h3>Data that is deleted</h3>
+        <article class="card">
+          <span class="badge">Full Account Deletion</span>
+          <h2>Delete account and all related data</h2>
+          <p>
+            Users can request complete account deletion directly from the app support channel.
+          </p>
           <ul>
-            <li>Local user profiles</li>
-            <li>XP, levels, streaks</li>
-            <li>Challenges and missions progress</li>
-            <li>Trade history and local app state/preferences</li>
+            <li>Send a request email to: <strong>webmaniabusiness@gmail.com</strong></li>
+            <li>Include the email used for login (Google account)</li>
+            <li>Use subject: <strong>Account Deletion Request</strong></li>
           </ul>
-        </div>
+          <p class="ok">
+            On successful verification, the account and related cloud data are permanently removed.
+          </p>
+        </article>
 
-        <div class="card warn">
-          <h3>Data that is not deleted by this request</h3>
+        <article class="card">
+          <span class="badge">Partial Data Deletion</span>
+          <h2>Delete only profile/challenge data (without deleting account)</h2>
+          <p>
+            The app supports in-app partial deletion.
+          </p>
+          <ul>
+            <li>Open Profiles</li>
+            <li>Select the profile you want to remove</li>
+            <li>Use the Delete Profile action</li>
+          </ul>
+          <p>
+            This removes profile-related progress data (missions, challenge history, profile state)
+            while keeping the user account active.
+          </p>
+          <p class="ok">
+            This is a supported partial deletion flow.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="badge">Retention</span>
+          <h2>Data retention policy</h2>
+          <ul>
+            <li>Full account deletion requests are processed within 30 days.</li>
+            <li>After deletion, recovery is not guaranteed.</li>
+            <li>Minimal technical logs may be retained for legal/security obligations.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="badge">Important</span>
+          <h2>What this means for Google Play form</h2>
           <ul>
             <li>
-              Google Play purchase and subscription records (managed by Google Play)
+              <strong>Can users request account deletion?</strong> Yes
             </li>
             <li>
-              Billing entitlement history linked to the user's Google account
+              <strong>Do users have partial deletion without deleting account?</strong> Yes
+              (profile deletion in-app)
             </li>
           </ul>
-        </div>
+          <p class="warn">
+            If your support email is different, update it before publishing.
+          </p>
+        </article>
       </section>
 
-      <section class="card">
-        <h2>Retention period</h2>
-        <p>
-          Data removed with profile deletion or full local reset is deleted
-          <strong>immediately on device</strong>.
-        </p>
-      </section>
-
-      <section class="card">
-        <h2>Need support</h2>
-        <p>
-          If you cannot access the app and still need help, contact the developer
-          using the support channel listed on the Google Play store page for
-          StreakXP Trading Trainer.
-        </p>
-      </section>
+      <p class="footer">
+        If you need support, contact: <a href="mailto:support@streakxp.app">support@streakxp.app</a>
+      </p>
     </main>
   </body>
 </html>
